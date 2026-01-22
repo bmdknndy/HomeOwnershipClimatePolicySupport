@@ -1,6 +1,6 @@
 # Class, Homeownership, and Clean Energy Attitudes (CES 2024)
 
-[Read the brief](docs/brief/)
+[Read the brief](https://bmdknndy.github.io/HomeOwnershipClimatePolicySupport/brief/brief.html)
 
 This project analyzes support for clean energy and environmental policy using nationally representative survey data from the 2024 Cooperative Election Study (CES).
 
