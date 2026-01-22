@@ -25,13 +25,13 @@ The analysis uses the 2024 CES Common Content, weighted to approximate national 
 
 The primary outcome is clean_energy_support, a composite index capturing support for environmental and clean energy policies. The index is constructed as the mean of multiple binary items, including support for:
 
-EPA regulation of carbon dioxide emissions
+-   EPA regulation of carbon dioxide emissions
 
-Renewable electricity generation requirements
+-   Renewable electricity generation requirements
 
-Strengthened enforcement of the Clean Air and Clean Water Acts
+-   Strengthened enforcement of the Clean Air and Clean Water Acts
 
-Restrictions on fossil fuel expansion and new oil and gas leases
+-   Restrictions on fossil fuel expansion and new oil and gas leases
 
 The index ranges from 0 to 1, where higher values indicate stronger overall support for clean energy and environmental regulation. Using an index rather than a single item provides a more stable measure of underlying policy orientation.
 
@@ -77,7 +77,7 @@ However, even after accounting for these political variables, homeownership rema
 
 To facilitate interpretation, Table 1 presents a labeled regression table with human-readable predictor names:
 
-```markdown
+```{=html}
 {{< include ../exports/tables/wls_table_labeled.html >}}
 ```
 
