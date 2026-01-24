@@ -128,3 +128,19 @@ Future work could:
 3.  Explore longitudinal changes in tenure and climate attitudes
 
 Nonetheless, the present results provide clear evidence that housing tenure is an underappreciated dimension of class relevant to climate politics.
+
+## Methods
+
+[View the repo for this project on my GitHub](https://github.com/bmdknndy/HomeOwnershipClimatePolicySupport)
+
+To reproduce:
+
+1.  run all DuckDB SQL scripts in sql/ folder
+
+2.  run notebooks/01_analysis.ipynb
+
+3.  run report/brief.ipynb
+
+For additional details on methods, run notebooks/03_methods_appendix.ipynb
+
+***Brady Kennedy***
