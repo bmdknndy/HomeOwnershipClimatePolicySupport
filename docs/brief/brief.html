@@ -82,34 +82,25 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="motivation-and-question" class="level2">
 <h2 class="anchored" data-anchor-id="motivation-and-question">Motivation and Question</h2>
-<p>Public support for clean energy and environmental regulation is often described in ideological or partisan terms. While political orientation is clearly central, less attention has been paid to how material position—particularly housing tenure—may independently structure climate policy attitudes.</p>
-<p>This brief asks a simple question:</p>
-<p><strong>Does homeownership predict support for clean energy policy net of party, ideology, and income?</strong></p>
+<p>Public support for clean energy and environmental regulation is often described in ideological or partisan terms. While political orientation is clearly important, less attention has been paid to how material position, particularly in terms of housing tenure, may independently structure climate policy attitudes.</p>
+<p>In what follows, I explore whether homeownership predicts support for clean energy policies after controling for the factors that are often thought as determining such suuport: political party affiliation, politcal ideology, and income.</p>
 <p>Using nationally representative survey data from the 2024 Cooperative Election Study (CES), I show that homeownership is associated with lower support for clean energy policies even after accounting for political orientation and standard socioeconomic controls. This pattern suggests that climate attitudes may reflect not only ideology, but also individuals’ positions within housing and asset structures that shape exposure to regulation and perceived costs.</p>
 </section>
 <section id="data-and-variables" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-variables">Data and Variables</h2>
-<p>The analysis uses the 2024 CES Common Content, weighted to approximate national representativeness. After listwise deletion on key variables, the analytic sample includes approximately 56,000 respondents.</p>
-<p>The primary outcome is clean_energy_support, a composite index capturing support for environmental and clean energy policies. The index is constructed as the mean of multiple binary items, including support for:</p>
-<ul>
-<li><p>EPA regulation of carbon dioxide emissions</p></li>
-<li><p>Renewable electricity generation requirements</p></li>
-<li><p>Strengthened enforcement of the Clean Air and Clean Water Acts</p></li>
-<li><p>Restrictions on fossil fuel expansion and new oil and gas leases</p></li>
-</ul>
-<p>The index ranges from 0 to 1, where higher values indicate stronger overall support for clean energy and environmental regulation. Using an index rather than a single item provides a more stable measure of underlying policy orientation.</p>
+<p>This analysis uses the 2024 CES Common Content, which is weighted to approximate national representativeness. After cleaning the key variables, the sample used in the final analysis includes about 56,000 respondents.</p>
+<p>The primary outcome variable for my analysis is clean_energy_support, a composite index designed to capture support for a range of environmental and clean energy policies. This variable is constructed as the mean of multiple binary variables taken as outcomes from the CES survey, including support for:</p>
+<p>-EPA regulation of carbon dioxide emissions</p>
+<p>-Renewable electricity generation requirements</p>
+<p>-Strengthened enforcement of the Clean Air and Clean Water Acts</p>
+<p>-Restrictions on fossil fuel expansion and new oil and gas leases</p>
+<p>The variable ranges from 0 to 1, with higher values indicating stronger overall support for clean energy and environmental regulation.</p>
 </section>
 <section id="descriptive-patterns-income-homeownership-and-clean-energy-support" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-patterns-income-homeownership-and-clean-energy-support">Descriptive Patterns: Income, Homeownership, and Clean Energy Support</h2>
 <p>Figure 1 presents weighted mean levels of clean energy support by income group and homeownership status:</p>
 <p><img src="../exports/figures/clean_energy_by_income_homeowner.png" class="img-fluid" alt="Clean energy support by income and homeownership"></p>
-<p>Two patterns are clear:</p>
-<ol type="1">
-<li><p>Renters exhibit consistently higher support for clean energy policies than homeowners, across all income groups.</p></li>
-<li><p>Income differences within tenure groups are relatively small, especially among renters.</p></li>
-</ol>
-<p>Among renters, support for clean energy policies is high (approximately 0.70 on a 0–1 scale) regardless of income. Among homeowners, support is substantially lower (roughly 0.57–0.59), again with little variation by income.</p>
-<p>These patterns suggest that housing tenure may be more strongly associated with climate attitudes than income alone, motivating multivariate analysis.</p>
+<p>Two patterns stand out from this graph. Renters exhibit consistently higher support for clean energy policies than homeowners, across all income groups, and income differences within tenure groups are relatively small, especially among renters. Among renters, support for clean energy policies is high (approximately 0.70 on a 0–1 scale) regardless of income. Among homeowners, support is substantially lower (roughly 0.57–0.59), again with little variation by income. These patterns suggest that housing tenure may be more strongly associated with climate attitudes than income alone, as will be explored further below.</p>
 </section>
 <section id="weighted-ols-results-does-homeownership-matter-net-of-politics" class="level2">
 <h2 class="anchored" data-anchor-id="weighted-ols-results-does-homeownership-matter-net-of-politics">Weighted OLS Results: Does Homeownership Matter Net of Politics?</h2>
@@ -124,9 +115,9 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Figure 2 displays coefficient estimates with 95% confidence intervals:</p>
 <p><img src="../exports/figures/ols_coefplot.png" class="img-fluid" alt="Coefficient plot from weighted OLS model"></p>
-<p>As expected, party identification and ideology are the strongest predictors of clean energy support. Moving from liberal to conservative ideological categories is associated with large declines in support, and partisan differences are substantial.</p>
-<p>However, even after accounting for these political variables, homeownership remains negatively associated with clean energy support. The estimated effect is modest in magnitude (approximately −0.03 on a 0–1 scale), but statistically significant and comparable to—or larger than—the effect of moving between income categories.</p>
-<p>To facilitate interpretation, Table 1 presents a labeled regression table with human-readable predictor names:</p>
+<p>As expected from the “common sense” view of how views of such policies are distributed, party identification and political ideology are the strongest predictors of clean energy support. Moving from liberal to conservative ideological categories is associated with large declines in support, and partisan differences are substantial.</p>
+<p>However, even after accounting for these political variables, homeownership remains negatively associated with clean energy support. The estimated effect is modest in magnitude (approximately −0.03 on a 0–1 scale), but statistically significant and comparable to or larger than the effect of moving between income categories.</p>
+<p>Table 1 presents a regression table with predictor names.</p>
 <style type="text/css">
 #T_fad71 th {
   text-align: left;
@@ -301,42 +292,29 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>From the above we observe three clear findings:</p>
-<ol type="1">
-<li><p>High income is weakly associated with lower support, while middle income shows little difference relative to low income.</p></li>
-<li><p>Education effects are small once political orientation is controlled.</p></li>
-<li><p>The homeowner coefficient remains negative net of all controls.</p></li>
-</ol>
+<p>Notably, high incomes are weakly associated with lower support, while middle incomes show little difference relative to low incomes. In addition, education’s effects are small once political orientation is controlled for. The homeowner coefficient remains negative net of all controls.</p>
 <p>These results indicate that housing tenure captures something distinct from income and ideology, likely related to asset ownership, exposure to energy costs, or perceived regulatory risk.</p>
 </section>
 <section id="predicted-values-visualizing-the-tenure-gap" class="level2">
 <h2 class="anchored" data-anchor-id="predicted-values-visualizing-the-tenure-gap">Predicted Values: Visualizing the Tenure Gap</h2>
 <p>To make these results more intuitive, Figure 3 plots predicted levels of clean energy support across the ideological spectrum, holding other covariates constant:</p>
 <p><img src="../exports/figures/predicted_support_ideo_income.png" class="img-fluid" alt="Predicted clean energy support by ideologg and income (weighted)"></p>
-<p>This plot of predicted values suggests that:</p>
-<ol type="1">
-<li><p>Ideology strongly structures climate attitudes, with steep declines from liberal to conservative positions.</p></li>
-<li><p>Income differences are modest at most ideological levels.</p></li>
-<li><p>Homeownership shifts the entire prediction curve downward, indicating lower support across ideological positions.</p></li>
-</ol>
-<p>In other words, homeowners are less supportive of clean energy policies even when they share similar ideological positions with renters.</p>
+<p>This graphic suggests that, quite unsusprisingly, ideology strongly structures climate attitudes, with steep declines in suport from liberal to conservative positions. However, income differences are modest at most ideological levels, and homeownership shifts the entire curve downward, indicating lower support across ideological positions. In other words, homeowners are less supportive of clean energy policies even when they share similar ideological positions with renters.</p>
 </section>
 <section id="interpretation-and-implications" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-and-implications">Interpretation and Implications</h2>
 <p>Taken together, these findings suggest that support for clean energy policy is shaped not only by ideology and partisanship, but also by material position within the housing system. Homeownership appears to be associated with lower support for environmental regulation in ways not reducible to income or political identity.</p>
 <p>One plausible interpretation is that homeowners face different perceived costs and risks from climate and energy regulation, including concerns about housing retrofits, energy prices, or property values. While the CES cannot directly test these mechanisms, the results point to the importance of considering tenure and asset exposure when analyzing public opinion on climate policy.</p>
-<p>More broadly, this analysis demonstrates that survey data—often criticized for capturing only “attitudes”—can still be used to study structured differences linked to social position, especially when variables are interpreted relationally rather than as isolated preferences.</p>
+<p>More broadly, this analysis demonstrates that survey data, often criticized for capturing only “attitudes”,can still be used to study structured differences linked to social position, especially when variables are interpreted relationally rather than as isolated preferences.</p>
 </section>
 <section id="limitations-and-next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="limitations-and-next-steps">Limitations and Next Steps</h2>
-<p>This analysis is descriptive and cross-sectional. Causal interpretations should be avoided. Additionally, the clean energy support index weights all component items equally, which may obscure policy-specific dynamics.</p>
+<p>This analysis is descriptive and cross-sectional; therefore causal interpretations should be avoided without further work. Additionally, the clean energy support index weights all component items equally, which may obscure percieved differences in the in the percieved impact or importance of specific policies.</p>
 <p>Future work could:</p>
-<ol type="1">
-<li><p>Examine individual policy items as robustness checks</p></li>
-<li><p>Incorporate geographic context or energy cost measures</p></li>
-<li><p>Explore longitudinal changes in tenure and climate attitudes</p></li>
-</ol>
-<p>Nonetheless, the present results provide clear evidence that housing tenure is an underappreciated dimension of class relevant to climate politics.</p>
+<p>-Examine individual policy items as robustness checks</p>
+<p>-Incorporate geographic context or energy cost measures</p>
+<p>-Explore longitudinal changes in tenure and climate attitudes</p>
+<p>Nonetheless, the present results provide clear evidence that housing tenure is an underappreciated dimension of class relevant to understanding support for climate friendly politics.</p>
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
