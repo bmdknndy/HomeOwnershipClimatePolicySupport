@@ -183,3 +183,7 @@ cython_debug/
 # Raw Data
 data/raw
 .Rproj.user
+claude/
+.claude/
+claude
+claude
