@@ -1,2 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
+brief.html
+brief_files/
+brief.log
+brief.tex
