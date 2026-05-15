@@ -180,7 +180,7 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-# Raw Data
+notebooks/for_portfolio
 data/raw
 .Rproj.user
 claude/
