@@ -1,7 +1,6 @@
--- Reset if needed
 DROP TABLE IF EXISTS ces_raw;
 
--- Load: make everything VARCHAR so DuckDB never chokes on "NA"
+-- Load raw CES data from csv
 CREATE TABLE ces_raw AS
 SELECT *
 FROM read_csv(
@@ -11,12 +10,10 @@ FROM read_csv(
   nullstr = ['NA', '__NA__', '']
 );
 
--- Sanity check
+-- Check/clean data
 SELECT COUNT(*) AS n_rows FROM ces_raw;
 
--- The file is 2024-only, so no `year` column.
--- Add it as a constant in your analysis layer.
-CREATE OR REPLACE VIEW v_2024 AS
+CREATE OR REPLACE VIEW v_2024 AS -- The file is 2024-only, so there's no `year` column....
 SELECT
   '2024'::INTEGER AS year,
 
