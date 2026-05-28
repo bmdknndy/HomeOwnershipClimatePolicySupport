@@ -1,7 +1,6 @@
--- Reset if needed
 DROP TABLE IF EXISTS analysis_model;
 
--- Create analysis table
+-- Create clean analysis table
 CREATE TABLE analysis_model AS
 WITH typed AS (
   SELECT
@@ -51,7 +50,7 @@ recode AS (
     race,
     hispanic,
 
-    -- Derived age assuming 2024
+    -- Derived age assuming year == 2024
     CASE
       WHEN birthyr BETWEEN 1900 AND 2010 THEN 2024 - birthyr
       ELSE NULL
@@ -69,7 +68,7 @@ recode AS (
       ELSE NULL
     END AS age_group,
 
-    -- Homeowner flag 
+    -- Homeownership flag 
     CASE WHEN ownhome = 1 THEN 1 WHEN ownhome = 2 THEN 0 ELSE NULL END AS homeowner,
 
     -- Income bins 
@@ -187,13 +186,13 @@ FROM index_build;
 -- Check row count
 SELECT COUNT(*) AS n_rows FROM analysis_model;
 
--- Check missingness + mean of DV
+-- Check missingness + mean of main dep var
 SELECT
   SUM(clean_energy_support IS NULL) AS missing_clean_energy_support,
   AVG(clean_energy_support) AS mean_clean_energy_support
 FROM analysis_model;
 
--- Check support rates for each policy item 
+-- Check support rates for each policy item to see if reasonable...
 SELECT
   AVG(epa_regulate_co2) AS p_epa_regulate_co2,
   AVG(renewables_20pct) AS p_renewables_20pct,
